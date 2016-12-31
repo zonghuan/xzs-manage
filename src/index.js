@@ -8,4 +8,4 @@ import Frame from './widget/frame'
 
 const content = document.getElementById('content')
 
-render(<Frame />,content)
+render(<Frame brumb={['订单','订单列表']}/>,content)

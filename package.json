@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --config ./webpack/dev.config.js --port 9090 ",
-    "prod": "webpack --progress --config ./webpack/prod.config.js"
+    "prod": "./node_modules/webpack/bin/webpack.js --progress --config ./webpack/prod.config.js"
   },
   "author": "",
   "license": "ISC",
