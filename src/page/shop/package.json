@@ -1,0 +1,5 @@
+{
+  "name":"shop",
+  "desc":"商店页",
+  "main":"shop.js"
+}

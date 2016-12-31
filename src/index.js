@@ -3,9 +3,9 @@ import "./widget/common/global.less";
 
 import React from 'react'
 import {render} from 'react-dom'
+
 import Frame from './widget/frame'
-
-
+import Routes from './widget/routes'
 const content = document.getElementById('content')
 
-render(<Frame brumb={['订单','订单列表']}/>,content)
+render(Routes,content)

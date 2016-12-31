@@ -4,11 +4,8 @@
     {
       "name":"商家列表",
       "icon":"&#xe7c6;",
-      "href":""
-    },{
-      "name":"商家详情",
-      "icon":"&#xe804;",
-      "href":""
+      "href":"#/shop",
+      "element":"shop-list"
     }
   ]
 }

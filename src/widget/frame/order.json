@@ -4,11 +4,8 @@
     {
       "name":"订单列表",
       "icon":"&#xe7c6;",
-      "href":""
-    },{
-      "name":"订单详情",
-      "icon":"&#xe804;",
-      "href":""
+      "href":"#/welcome",
+      "element":"order-list"
     }
   ]
 }

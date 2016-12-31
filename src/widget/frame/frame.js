@@ -15,8 +15,10 @@ import {
   menu,
   menuHeader,
   menuBody,
-  menuItem
+  menuItem,
+  menuItemSelect
 } from './frame.less'
+import {match} from 'react-router'
 
 const configs = [
   require('./order.json'),
@@ -26,13 +28,29 @@ const configs = [
 export default React.createClass({
   getInitialState(){
     return {
-      open:null
+      open:null,
+      item:null,
+      brumb:[]
     };
+  },
+  componentDidMount(){
+    // 根据当前hash  获取选中的tab
+    var hash = window.location.hash;
+    for(var i=0;i<configs.length;i++){
+      for(var j=0;j<configs[i].children.length;j++){
+        if(hash==configs[i].children[j].href){
+          return this.setState({
+            open:i,
+            brumb:[configs[i].name,configs[i].children[j].name]
+          });
+        }
+      }
+    }
   },
   render(){
 
     // 面包屑
-    const brumbList=this.props.brumb||[];
+    const brumbList=this.state.brumb||[];
     const result=[];
     for(var i=0;i<brumbList.length;i++){
       result.push(<span key={2*i}>{brumbList[i]}</span>)
@@ -88,8 +106,9 @@ export default React.createClass({
                   </div>
                   <div className={menuBody} style={{height}}>
                     {config.children.map((child,ix)=>{
+                      var selectClass = window.location.hash==child.href?menuItemSelect:"";
                       return (
-                        <a href={child.href} key={ix} className={menuItem}>
+                        <a href={child.href} key={ix} className={menuItem+" "+selectClass}>
                           <i className="iconfont" dangerouslySetInnerHTML={{__html:child.icon}}/>
                           <span>{child.name}</span>
                         </a>
