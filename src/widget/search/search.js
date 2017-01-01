@@ -4,7 +4,6 @@ import styles from './search.less'
 
 const FormItem = Form.Item
 
-
 export default React.createClass({
   getInitialState(){
     return {}

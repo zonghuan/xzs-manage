@@ -9,7 +9,7 @@ module.exports={
   },
   // lib
   lib:{
-    lib:['react','react-dom','antd','react-router','whatwg-fetch']
+    lib:['react','react-dom','antd','react-router','reqwest']
   },
   // html插件
   htmlConfig:new HtmlWebpackPlugin({
