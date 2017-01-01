@@ -1,5 +1,6 @@
 // 全局样式
 import "./widget/common/global.less";
+import 'antd/dist/antd.css'; 
 
 import React from 'react'
 import {render} from 'react-dom'

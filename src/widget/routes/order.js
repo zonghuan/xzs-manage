@@ -1,4 +1,4 @@
-import Welcome from '../../page/welcome';
+import Welcome from '../../page/order/welcome';
 
 export default [
   {path:"welcome",component:Welcome}
