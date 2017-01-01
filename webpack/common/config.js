@@ -18,10 +18,11 @@ module.exports={
   // postcss 支持css-module变量定义
   postcss:[require('postcss-modules-values')],
   resolve:{
-    // "alias":{
+    "alias":{
+      "widget":path.resolve(__dirname,'../../src/widget')
     //   "ant":path.resolve(node_modules,'antd','dist/antd.min.js'),
     //   "react":path.resolve(node_modules,'react','dist/react.min.js'),
     //   'react-dom':path.resolve(node_modules,'react-dom','dist/react-dom.min.js')
-    // }
+    }
   }
 };

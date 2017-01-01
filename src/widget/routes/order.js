@@ -1,5 +1,5 @@
-import Welcome from '../../page/order/welcome';
+import List from '../../page/order/list';
 
 export default [
-  {path:"welcome",component:Welcome}
+  {path:"welcome",component:List}
 ];

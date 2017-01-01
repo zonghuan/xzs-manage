@@ -1,7 +1,13 @@
 import React from 'react'
 import {Table} from 'antd'
+import Search from 'widget/search'
 
 export default React.createClass({
+  getInitialState(){
+    return {
+
+    }
+  },
   render(){
     const dataSource = [{
       key: '1',
@@ -30,8 +36,14 @@ export default React.createClass({
     }];
 
     return (
-      <Table dataSource={dataSource} columns={columns} />
+      <div>
+        <Search />
+        <Table dataSource={dataSource} columns={columns} />
+      </div>
     )
+  },
+  handleSubmit(e){
+    e.preventDefault();
 
   }
 })
