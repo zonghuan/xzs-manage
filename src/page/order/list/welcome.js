@@ -37,7 +37,19 @@ export default React.createClass({
 
     return (
       <div>
-        <Search />
+        <Search
+          widgets={[
+            {name:"name",type:"input",placeholder:"请输入名字",maxLength:20},
+            {name:"sex",width:'120',type:'select',options:[
+              {value:-1,name:'请选择'},
+              {value:0,name:'男'},
+              {value:1,name:'女'}
+            ]}
+          ]}
+          onSearch={e=>{
+            console.log(e)
+          }}
+        />
         <Table dataSource={dataSource} columns={columns} />
       </div>
     )

@@ -41,3 +41,31 @@ npm run prod
 #### route - 路由配置
 
 #### frame - 左侧导航
+
+#### search - 搜索条件组件,与`table`配合使用
+
+例子:
+
+````
+
+import Search from 'widget/search'
+
+<Search
+  // 组件列表
+  widgets={[
+    // input框
+    {name:"name",type:"input",placeholder:"请输入名字",maxLength:20},
+    // select选择
+    {name:"sex",width:'120',type:'select',options:[
+      {value:-1,name:'请选择'},
+      {value:0,name:'男'},
+      {value:1,name:'女'}
+    ]}
+  ]}
+  // 点击查询执行的回调
+  onSearch={e=>{
+    console.log(e)
+  }}
+/>
+
+````
