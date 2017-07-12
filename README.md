@@ -11,7 +11,7 @@
 ### 安装
 
 ```
-npm install && npm install webpack-dev-server -g
+npm install && npm install webpack-dev-server@1.16.2 -g && npm install webpack@1.13.3  -g
 ```
 
 ### 开发
